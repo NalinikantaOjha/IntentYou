@@ -23,15 +23,17 @@ protected EditText et1;
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,App2.class);
+              /*  Intent intent=new Intent(MainActivity.this,App2.class);
                 intent.putExtra("name",et1.getText().toString());
-                startActivity(intent);
-               /* Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                emailIntent.setType("text/plain");
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, " email subject");
+                startActivity(intent);*/
+               Intent intent = new Intent();
+               intent.setAction("Intent.ACTION_SEND");
+                intent.setType("plain/text");
+                intent.putExtra("username",et1.getText().toString());
+              /* emailIntent.putExtra(Intent.EXTRA_SUBJECT, " email subject");
                 emailIntent.putExtra(Intent.EXTRA_CC, new String[]{"dcosxx@gmail.com"});
-                emailIntent.putExtra(Intent.EXTRA_TEXT, "email content goes here");
-                startActivity(emailIntent);*/
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "email content goes here");*/
+                startActivity(intent);
 
             }
         });
